@@ -67,7 +67,7 @@ public class Data {
 		return passwordFrom;
 	}
 
-	public void addAccount(Credential credential) {
+	public static void addAccount(Credential credential) {
 		FileWriter fw1 = null;
 		FileWriter fw2 = null;
 		FileWriter fw3 = null;

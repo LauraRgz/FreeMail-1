@@ -2,11 +2,15 @@ package freemail.model;
 
 import javax.mail.*;
 
+import freemail.controller.General;
 import freemail.model.MailProvider.Protocol;
 
 public class PrototypeFetch {
 	
 	public static void main(String... args) throws MessagingException {
+		
+		General.Inicio();
+		
 		//String pop3Host = "imap.gmail.com";
 		//String pop3Host = "imap-mail.outlook.com";
 		String pop3Host = null;
