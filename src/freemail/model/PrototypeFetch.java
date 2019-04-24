@@ -11,7 +11,7 @@ public class PrototypeFetch {
 		//String pop3Host = "imap-mail.outlook.com";
 		String pop3Host = null;
 
-		Credential credential = new Credential("mailexample@mail.com","password");
+		Credential credential = new Credential("mailexample@mail.com","password", "name");
 		MailProvider provider = new MailProvider(pop3Host, Protocol.IMAP);
 		Account account = new Account(credential, provider);
 		account.connect();
