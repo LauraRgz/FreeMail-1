@@ -11,7 +11,7 @@ public class PrototypeFetch {
 		
 		General.Inicio();
 		
-		//String pop3Host = "imap.gmail.com";
+		/*//String pop3Host = "imap.gmail.com";
 		//String pop3Host = "imap-mail.outlook.com";
 		String pop3Host = null;
 
@@ -23,7 +23,9 @@ public class PrototypeFetch {
 		Message[] a = account.fetchMessages();
 		for(Message msg: a) {
 			System.out.println(msg.getSubject());
-		}
+			MessageContent content = new MessageContent(msg);
+			System.out.println(content.getContent());
+		}*/
 	}
 	
 }
