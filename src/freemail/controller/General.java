@@ -12,6 +12,9 @@ public class General extends Application {
 	static Stage menu;
 	static Stage sendMail;
 	static Stage addNewAccount;
+	static Stage messageContent;
+	static Stage messagesList;
+	static Stage receivedMessagesMail;
 	
 
 	@Override
@@ -39,6 +42,27 @@ public class General extends Application {
 			Scene thirdScene = new Scene(rootThird);
 			addNewAccount.setTitle("FreeMail");
 			addNewAccount.setScene(thirdScene);
+			
+			messageContent = new Stage();
+			URL fourth = getClass().getClassLoader().getResource("MessageContent.fxml");
+			Parent rootFourth = FXMLLoader.load(fourth);
+			Scene fourthScene = new Scene(rootFourth);
+			messageContent.setTitle("FreeMail");
+			messageContent.setScene(fourthScene);
+			
+			messagesList = new Stage();
+			URL fifth = getClass().getClassLoader().getResource("MessagesList.fxml");
+			Parent rootFifth = FXMLLoader.load(fifth);
+			Scene fifthScene = new Scene(rootFifth);
+			messagesList.setTitle("FreeMail");
+			messagesList.setScene(fifthScene);
+			
+			receivedMessagesMail = new Stage();
+			URL sixth = getClass().getClassLoader().getResource("ReceivedMessagesMail.fxml");
+			Parent rootSixth = FXMLLoader.load(sixth);
+			Scene sixthScene = new Scene(rootSixth);
+			receivedMessagesMail.setTitle("FreeMail");
+			receivedMessagesMail.setScene(sixthScene);
 			
 		}catch(Exception e) {
 			e.printStackTrace();
