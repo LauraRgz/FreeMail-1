@@ -34,7 +34,7 @@ public class MessagesListController {
     @FXML
     void pushBackButton(ActionEvent event) {
     	General.messagesList.close();
-    	General.receivedMessagesMail.show();
+    	General.receivedMessages.show();
     }
 
     @FXML

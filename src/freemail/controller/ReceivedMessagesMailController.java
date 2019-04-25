@@ -1,5 +1,6 @@
 package freemail.controller;
 
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -18,13 +19,13 @@ public class ReceivedMessagesMailController {
 
     @FXML
     void pushBackButton(ActionEvent event) {
-    	General.receivedMessagesMail.close();
+    	General.receivedMessages.close();
     	General.menu.show();
     }
 
     @FXML
     void pushNextButton(ActionEvent event) {
-    	General.receivedMessagesMail.close();
+    	General.receivedMessages.close();
     	General.messagesList.show();
     }
 

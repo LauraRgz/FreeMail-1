@@ -21,7 +21,8 @@ public class MessageContentController {
 
     @FXML
     void pushBackButton(ActionEvent event) {
-
+    	General.messageContent.close();
+    	General.messagesList.show();
     }
 
 }

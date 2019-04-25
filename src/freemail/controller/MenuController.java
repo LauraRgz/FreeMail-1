@@ -49,7 +49,7 @@ public class MenuController {
     @FXML
     void pushRecievedMessages(ActionEvent event) {
     	General.menu.close();
-    	General.receivedMessagesMail.show();
+    	General.receivedMessages.show();
     }
 
     @FXML
