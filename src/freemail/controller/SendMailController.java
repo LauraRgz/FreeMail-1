@@ -1,5 +1,6 @@
 package freemail.controller;
 
+import freemail.model.SendMail;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -47,7 +48,7 @@ public class SendMailController {
     	String subject = subjectText.getText();
     	String text = mailText.getText();
     	
-    	//Mail.sendMail(to, from, subject, text);
+    	SendMail.sendMail(to, from, subject, text);
     }
     
     public static void messageSent(Boolean messageSent) {
@@ -55,7 +56,7 @@ public class SendMailController {
     		statusText.setText("Message sent successfully");
     	}
     	else {
-    		statusText.setText("Email or Password is not correct");
+    		statusText.setText("Error sending mail");
     	}
     }
 }

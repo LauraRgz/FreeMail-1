@@ -17,18 +17,10 @@ public class MenuController {
     private MenuItem AddAccountButton;
 
     @FXML
-    private MenuItem accountInformationButton;
-
-    @FXML
     private MenuItem changeAccountInformationButton;
 
     @FXML
     private MenuItem deleteAccountButton;
-
-    @FXML
-    void pushAccountInformationButton(ActionEvent event) {
-
-    }
 
     @FXML
     void pushAddAccountButton(ActionEvent event) {

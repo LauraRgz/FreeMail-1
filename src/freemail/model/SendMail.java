@@ -10,6 +10,8 @@ import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 
+import freemail.controller.SendMailController;
+
 
 public class SendMail {
 	
@@ -41,12 +43,13 @@ public class SendMail {
 		
 		try {
 			Message message = new MimeMessage(session);
-			message.setFrom(new InternetAddress("freeMailPro1@gmail.com"));
+			message.setFrom(new InternetAddress(mailFrom));
 			message.setRecipients(Message.RecipientType.TO,
-		               InternetAddress.parse("jbravom1@alumnos.nebrija.es"));
+		               InternetAddress.parse(mailTo));
 			message.setSubject(subject);
 			message.setText(text);
 			Transport.send(message);
+			
 		}catch(MessagingException e) {
 			throw new RuntimeException(e);
 		}
