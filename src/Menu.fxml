@@ -80,7 +80,6 @@
             <MenuButton mnemonicParsing="false" text="Account" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="TOP">
               <items>
                 <MenuItem fx:id="AddAccountButton" mnemonicParsing="false" onAction="#pushAddAccountButton" text="Add Account" />
-                <MenuItem fx:id="accountInformationButton" mnemonicParsing="false" onAction="#pushAccountInformationButton" text="Account Information" />
                   <MenuItem fx:id="changeAccountInformationButton" mnemonicParsing="false" onAction="#pushChangeAccountInformationButton" text="Chage Account Information" />
                   <MenuItem fx:id="deleteAccountButton" mnemonicParsing="false" onAction="#pushDeleteAccountButton" text="Delete Account" />
               </items>
