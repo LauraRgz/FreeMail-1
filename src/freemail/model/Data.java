@@ -210,14 +210,14 @@ public class Data {
 	}
 	public void removePassword(String password) {
 		try {
-			File pass = new File("./Password");
+			File pass = new File("./Password.txt");
 			if(!pass.isFile()) {
 				System.out.println("El fichero no existe");
 				return;
 			}
 			//Constructor del nuevo fichero
 			File tempFile = new File(pass.getAbsoluteFile() + ".tmp");
-			BufferedReader br = new BufferedReader (new FileReader("/.Password.txt"));
+			BufferedReader br = new BufferedReader (new FileReader("./Password.txt"));
 			PrintWriter pw = new PrintWriter(new FileWriter(tempFile));
 			
 			String line = null;
