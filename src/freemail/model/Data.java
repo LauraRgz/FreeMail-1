@@ -6,6 +6,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.Scanner;
 
 public class Data {
@@ -108,5 +109,55 @@ public class Data {
 		}
 	
 	}
-	
+	public void removeName(String nameMail) {
+
+		try {
+
+		    File name = new File("./NameMail.txt");
+
+		    if (!name.isFile()) {
+		        System.out.println("no hay file");
+		        return;
+		    }
+
+		    //Constructor del nuevo fichero
+		    File tempFile = new File(name.getAbsolutePath() + ".tmp");
+
+		    BufferedReader br = new BufferedReader(new FileReader("./NameMail.txt"));
+		    PrintWriter pw = new PrintWriter(new FileWriter(tempFile));
+
+		    String line = null;
+
+		    //Lee del fichero original y escribe en el nuevo fichero
+	        //A menos que el contenido actual sea igual
+		    while ((line = br.readLine()) != null) {
+
+		        if (!line.trim().equals(nameMail)) {
+
+		            pw.println(line);
+		            pw.flush();
+		        }
+		    }
+		    pw.close();
+		    br.close();
+
+		    //Borra el fichero orginal
+		    if (!name.delete()) {
+		        System.out.println("Could not delete file");
+		        return;
+		    }
+
+		    //Renombra el nuevo fichero
+		    if (!tempFile.renameTo(name)){
+		        System.out.println("Could not rename file");
+
+		    }
+		} catch (FileNotFoundException ex) {
+		    ex.printStackTrace();
+		} catch (IOException ex) {
+		    ex.printStackTrace();
+		}
+	}
 }
+
+
