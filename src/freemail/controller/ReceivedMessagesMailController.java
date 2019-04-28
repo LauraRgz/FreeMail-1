@@ -21,17 +21,13 @@ public class ReceivedMessagesMailController {
     void pushBackButton(ActionEvent event) {
     	General.receivedMessages.close();
     	General.menu.show();
+    	mailText.clear();
     }
 
     @FXML
     void pushNextButton(ActionEvent event) {
     	General.receivedMessages.close();
     	General.messagesList.show();
+    	mailText.clear();
     }
-
-    @FXML
-    void writeMail(ActionEvent event) {
-
-    }
-
 }
