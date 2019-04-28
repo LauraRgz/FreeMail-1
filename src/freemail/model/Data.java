@@ -116,7 +116,7 @@ public class Data {
 		    File name = new File("./NameMail.txt");
 
 		    if (!name.isFile()) {
-		        System.out.println("no hay file");
+		        System.out.println("El fichero no existe");
 		        return;
 		    }
 
@@ -133,6 +133,56 @@ public class Data {
 		    while ((line = br.readLine()) != null) {
 
 		        if (!line.trim().equals(nameMail)) {
+
+		            pw.println(line);
+		            pw.flush();
+		        }
+		    }
+		    pw.close();
+		    br.close();
+
+		    //Borra el fichero orginal
+		    if (!name.delete()) {
+		        System.out.println("Could not delete file");
+		        return;
+		    }
+
+		    //Renombra el nuevo fichero
+		    if (!tempFile.renameTo(name)){
+		        System.out.println("Could not rename file");
+
+		    }
+		} catch (FileNotFoundException ex) {
+		    ex.printStackTrace();
+		} catch (IOException ex) {
+		    ex.printStackTrace();
+		}
+	}
+	
+	public void removeMail(String mail) {
+
+		try {
+
+		    File name = new File("./Mail.txt");
+
+		    if (!name.isFile()) {
+		        System.out.println("El fichero no existe");
+		        return;
+		    }
+
+		    //Constructor del nuevo fichero
+		    File tempFile = new File(name.getAbsolutePath() + ".tmp");
+
+		    BufferedReader br = new BufferedReader(new FileReader("./Mail.txt"));
+		    PrintWriter pw = new PrintWriter(new FileWriter(tempFile));
+
+		    String line = null;
+
+		    //Lee del fichero original y escribe en el nuevo fichero
+	        //A menos que el contenido actual sea igual
+		    while ((line = br.readLine()) != null) {
+
+		        if (!line.trim().equals(mail)) {
 
 		            pw.println(line);
 		            pw.flush();

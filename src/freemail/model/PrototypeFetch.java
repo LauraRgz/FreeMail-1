@@ -13,7 +13,7 @@ public class PrototypeFetch {
 		
 		Data data = new Data();
 		
-		data.removeName("gmail");
+		data.removeMail("freeMailPro1@gmail.com");
 		
 		/*//String pop3Host = "imap.gmail.com";
 		//String pop3Host = "imap-mail.outlook.com";
