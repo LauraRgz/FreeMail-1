@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="freemail.controller.MessagesListController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="freemail.controller.MessagesListController">
    <bottom>
       <GridPane BorderPane.alignment="CENTER">
         <columnConstraints>
@@ -39,21 +39,21 @@
       <GridPane BorderPane.alignment="CENTER">
         <columnConstraints>
             <ColumnConstraints hgrow="SOMETIMES" maxWidth="250.0" minWidth="10.0" prefWidth="250.0" />
-          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="354.0" minWidth="10.0" prefWidth="309.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="150.0" minWidth="10.0" prefWidth="309.0" />
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="250.0" minWidth="10.0" prefWidth="250.0" />
         </columnConstraints>
         <rowConstraints>
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="39.0" prefWidth="220.0" text="Messages" textAlignment="CENTER" GridPane.columnIndex="1">
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="39.0" prefWidth="118.0" text="Messages" textAlignment="CENTER" GridPane.columnIndex="1">
                <font>
                   <Font size="27.0" />
                </font>
             </Label>
-            <Separator orientation="VERTICAL" prefHeight="30.0" prefWidth="154.0">
+            <Separator orientation="VERTICAL" prefHeight="30.0" prefWidth="276.0">
                <padding>
-                  <Insets left="180.0" />
+                  <Insets left="235.0" />
                </padding>
             </Separator>
             <Separator orientation="VERTICAL" prefHeight="30.0" prefWidth="0.0" GridPane.columnIndex="2">
@@ -64,6 +64,6 @@
       </GridPane>
    </top>
    <center>
-      <ListView fx:id="messageList" onEditCancel="#editCancel" onEditCommit="#editCommit" onEditStart="#editStart" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+      <ListView fx:id="messageList" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onEditCancel="#editCancel" onEditCommit="#editCommit" onEditStart="#editStart" prefHeight="331.0" prefWidth="580.0" BorderPane.alignment="CENTER" />
    </center>
 </BorderPane>

@@ -35,7 +35,8 @@ public class MenuController {
 
     @FXML
     void pushDeleteAccountButton(ActionEvent event) {
-
+    	General.menu.close();
+    	General.deleteAccount.show();
     }
 
     @FXML

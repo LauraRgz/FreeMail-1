@@ -9,11 +9,7 @@ public class PrototypeFetch {
 	
 	public static void main(String... args) throws MessagingException {
 		
-		//General.Inicio();
-		
-		Data data = new Data();
-		
-		data.removePassword("%zU#nBvvQj!0kb7");
+		General.Inicio();
 		
 		/*//String pop3Host = "imap.gmail.com";
 		//String pop3Host = "imap-mail.outlook.com";

@@ -109,7 +109,7 @@ public class Data {
 		}
 	
 	}
-	public void removeName(String nameMail) {
+	public static void removeName(String nameMail) {
 
 		try {
 
@@ -159,7 +159,7 @@ public class Data {
 		}
 	}
 	
-	public void removeMail(String nameMail) {
+	public static void removeMail(String nameMail) {
 
 		try {
 
@@ -208,7 +208,7 @@ public class Data {
 		    ex.printStackTrace();
 		}
 	}
-	public void removePassword(String password) {
+	public static void removePassword(String password) {
 		try {
 			File pass = new File("./Password.txt");
 			if(!pass.isFile()) {
