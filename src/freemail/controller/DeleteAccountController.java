@@ -61,8 +61,8 @@ public class DeleteAccountController {
     		account.connect();
     		
     		if(account.isConnected()) {
-    			Data.removeMail(accountName);
-        		Data.removeName(mail);
+    			Data.removeMail(mail);
+        		Data.removeName(accountName);
         		Data.removePassword(password);
         		
         		statusText.setText("Account removed");
