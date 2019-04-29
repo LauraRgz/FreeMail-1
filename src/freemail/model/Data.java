@@ -159,7 +159,7 @@ public class Data {
 		}
 	}
 	
-	public static void removeMail(String nameMail) {
+	public static void removeMail(String mailAccount) {
 
 		try {
 
@@ -182,7 +182,7 @@ public class Data {
 	        //A menos que el contenido actual sea igual
 		    while ((line = br.readLine()) != null) {
 
-		        if (!line.trim().equals(mail)) {
+		        if (!line.trim().equals(mailAccount)) {
 
 		            pw.println(line);
 		            pw.flush();
@@ -208,6 +208,7 @@ public class Data {
 		    ex.printStackTrace();
 		}
 	}
+	
 	public static void removePassword(String password) {
 		try {
 			File pass = new File("./Password.txt");
