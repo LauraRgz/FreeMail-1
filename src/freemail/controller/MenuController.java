@@ -30,7 +30,8 @@ public class MenuController {
 
     @FXML
     void pushChangeAccountInformationButton(ActionEvent event) {
-
+    	General.menu.close();
+    	General.changeAccountInformation.show();
     }
 
     @FXML

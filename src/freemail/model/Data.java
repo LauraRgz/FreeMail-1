@@ -249,10 +249,7 @@ public class Data {
 			ex.printStackTrace();
 		}
 	}
-	public static void editName(String nameMail) {
-		//Se pide por pantalla los datos 
-		Scanner sc = new Scanner(System.in);
-		String newName = sc.nextLine();
+	public static void editName(String nameMail, String newName) {
 		
 		try {
 
@@ -304,10 +301,7 @@ public class Data {
 		    ex.printStackTrace();
 		}
 	}
-	public static void editMail(String mailAccount) {
-		//Se pide por pantalla los datos 
-		Scanner sc = new Scanner(System.in);
-		String newMail = sc.nextLine();
+	public static void editMail(String mailAccount, String newMail) {
 		
 		try {
 
@@ -359,11 +353,8 @@ public class Data {
 		    ex.printStackTrace();
 		}
 	}
-	public static void editPassword(String password) {
-		//Se pide por pantalla los datos 
-		Scanner sc = new Scanner(System.in);
-		String newPassword = sc.nextLine();
-		
+	public static void editPassword(String password, String newPassword) {
+
 		try {
 
 		    File pass = new File("./Password.txt");
