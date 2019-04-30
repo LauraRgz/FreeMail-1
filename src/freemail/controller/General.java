@@ -16,6 +16,7 @@ public class General extends Application {
 	static Stage messagesList;
 	static Stage receivedMessages;
 	static Stage deleteAccount;
+	static Stage changeAccountInformation;
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
@@ -70,6 +71,13 @@ public class General extends Application {
 			Scene seventhScene = new Scene(rootSeventh);
 			deleteAccount.setTitle("FreeMail");
 			deleteAccount.setScene(seventhScene);
+			
+			changeAccountInformation = new Stage();
+			URL eigth = getClass().getClassLoader().getResource("ChangeAccountInformation.fxml");
+			Parent rootEigth = FXMLLoader.load(eigth);
+			Scene eigthScene = new Scene(rootEigth);
+			changeAccountInformation.setTitle("FreeMail");
+			changeAccountInformation.setScene(eigthScene);
 			
 		}catch(Exception e) {
 			e.printStackTrace();
