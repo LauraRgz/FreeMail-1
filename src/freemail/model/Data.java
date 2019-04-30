@@ -249,6 +249,171 @@ public class Data {
 			ex.printStackTrace();
 		}
 	}
+	public static void editName(String nameMail) {
+		//Se pide por pantalla los datos 
+		Scanner sc = new Scanner(System.in);
+		String newName = sc.nextLine();
+		
+		try {
+
+		    File name = new File("./NameMail.txt");
+
+		    if (!name.isFile()) {
+		        System.out.println("El fichero no existe");
+		        return;
+		    }
+
+		    //Constructor del nuevo fichero
+		    File tempFile = new File(name.getAbsolutePath() + ".tmp");
+
+		    BufferedReader br = new BufferedReader(new FileReader("./NameMail.txt"));
+		    PrintWriter pw = new PrintWriter(new FileWriter(tempFile));
+
+		    String line = null;
+
+		    //Lee del fichero original y escribe en el nuevo fichero
+	        //A menos que el contenido actual sea igual
+		    while ((line = br.readLine()) != null) {
+
+		        if (!line.trim().equals(nameMail)) {
+		      
+		            pw.println(line);
+		            pw.flush();
+		        }else if (line.trim().equals(nameMail)) {
+		        	pw.println(newName);
+		        }
+		        
+		    }
+		    pw.close();
+		    br.close();
+
+		    //Borra el fichero orginal
+		    if (!name.delete()) {
+		        System.out.println("Could not delete file");
+		        return;
+		    }
+
+		    //Renombra el nuevo fichero
+		    if (!tempFile.renameTo(name)){
+		        System.out.println("Could not rename file");
+
+		    }
+		} catch (FileNotFoundException ex) {
+		    ex.printStackTrace();
+		} catch (IOException ex) {
+		    ex.printStackTrace();
+		}
+	}
+	public static void editMail(String mailAccount) {
+		//Se pide por pantalla los datos 
+		Scanner sc = new Scanner(System.in);
+		String newMail = sc.nextLine();
+		
+		try {
+
+		    File mail = new File("./Mail.txt");
+
+		    if (!mail.isFile()) {
+		        System.out.println("El fichero no existe");
+		        return;
+		    }
+
+		    //Constructor del nuevo fichero
+		    File tempFile = new File(mail.getAbsolutePath() + ".tmp");
+
+		    BufferedReader br = new BufferedReader(new FileReader("./Mail.txt"));
+		    PrintWriter pw = new PrintWriter(new FileWriter(tempFile));
+
+		    String line = null;
+
+		    //Lee del fichero original y escribe en el nuevo fichero
+	        //A menos que el contenido actual sea igual
+		    while ((line = br.readLine()) != null) {
+
+		        if (!line.trim().equals(mailAccount)) {
+		      
+		            pw.println(line);
+		            pw.flush();
+		        }else if (line.trim().equals(mailAccount)) {
+		        	pw.println(newMail);
+		        }
+		        
+		    }
+		    pw.close();
+		    br.close();
+
+		    //Borra el fichero orginal
+		    if (!mail.delete()) {
+		        System.out.println("Could not delete file");
+		        return;
+		    }
+
+		    //Renombra el nuevo fichero
+		    if (!tempFile.renameTo(mail)){
+		        System.out.println("Could not rename file");
+
+		    }
+		} catch (FileNotFoundException ex) {
+		    ex.printStackTrace();
+		} catch (IOException ex) {
+		    ex.printStackTrace();
+		}
+	}
+	public static void editPassword(String password) {
+		//Se pide por pantalla los datos 
+		Scanner sc = new Scanner(System.in);
+		String newPassword = sc.nextLine();
+		
+		try {
+
+		    File pass = new File("./Password.txt");
+
+		    if (!pass.isFile()) {
+		        System.out.println("El fichero no existe");
+		        return;
+		    }
+
+		    //Constructor del nuevo fichero
+		    File tempFile = new File(pass.getAbsolutePath() + ".tmp");
+
+		    BufferedReader br = new BufferedReader(new FileReader("./Password.txt"));
+		    PrintWriter pw = new PrintWriter(new FileWriter(tempFile));
+
+		    String line = null;
+
+		    //Lee del fichero original y escribe en el nuevo fichero
+	        //A menos que el contenido actual sea igual
+		    while ((line = br.readLine()) != null) {
+
+		        if (!line.trim().equals(password)) {
+		      
+		            pw.println(line);
+		            pw.flush();
+		        }else if (line.trim().equals(password)) {
+		        	pw.println(newPassword);
+		        }
+		        
+		    }
+		    pw.close();
+		    br.close();
+
+		    //Borra el fichero orginal
+		    if (!pass.delete()) {
+		        System.out.println("Could not delete file");
+		        return;
+		    }
+
+		    //Renombra el nuevo fichero
+		    if (!tempFile.renameTo(pass)){
+		        System.out.println("Could not rename file");
+
+		    }
+		} catch (FileNotFoundException ex) {
+		    ex.printStackTrace();
+		} catch (IOException ex) {
+		    ex.printStackTrace();
+		}
+	}
 }
 
 
