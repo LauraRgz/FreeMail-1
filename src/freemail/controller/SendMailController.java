@@ -32,8 +32,8 @@ public class SendMailController {
 
     @FXML
     void pushBackButton(ActionEvent event) {
-    	General.sendMail.close();
-    	General.menu.show();
+    	Main.sendMail.close();
+    	Main.menu.show();
     	fromText.clear();
     	toText.clear();
     	subjectText.clear();

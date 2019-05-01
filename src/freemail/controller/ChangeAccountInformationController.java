@@ -49,8 +49,8 @@ public class ChangeAccountInformationController {
 
     @FXML
     void pushBackButton(ActionEvent event) {
-    	General.changeAccountInformation.close();
-    	General.menu.show();
+    	Main.changeAccountInformation.close();
+    	Main.menu.show();
     	accountNameText.clear();
     	mailText.clear();
     	passwordText.clear();

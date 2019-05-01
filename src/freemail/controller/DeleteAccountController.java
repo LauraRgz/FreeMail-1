@@ -37,8 +37,8 @@ public class DeleteAccountController {
 
     @FXML
     void pushBackButton(ActionEvent event) {
-    	General.deleteAccount.close();
-    	General.menu.show();
+    	Main.deleteAccount.close();
+    	Main.menu.show();
     	accountNameText.clear();
     	mailText.clear();
     	passwordText.clear();
