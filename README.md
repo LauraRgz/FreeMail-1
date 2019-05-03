@@ -26,7 +26,7 @@ Once you have installed FreeMail, open the application by clicking on the icon. 
 5. Press the "Change Information" button
 
 ### Delete Account
-1. 1. Press the "Account" button
+1. Press the "Account" button
 2. Click the "Delete Account" button
 3. Type your account information
 4. Press the "Delete" button
