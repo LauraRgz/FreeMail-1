@@ -14,7 +14,7 @@ public class MenuController {
     private Button recievedMessages;
 
     @FXML
-    private MenuItem AddAccountButton;
+    private MenuItem addAccountButton;
 
     @FXML
     private MenuItem changeAccountInformationButton;
@@ -41,9 +41,9 @@ public class MenuController {
     }
 
     @FXML
-    void pushRecievedMessages(ActionEvent event) {
+    void pressedRecievedMessages(ActionEvent event) {
     	General.menu.close();
-    	General.receivedMessages.show();
+    	General.showMessage.show();
     }
 
     @FXML
