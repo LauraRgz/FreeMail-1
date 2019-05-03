@@ -49,14 +49,15 @@ public class SendMailController {
     	String text = mailText.getText();
     	
     	SendMail.sendMail(to, from, subject, text);
+    	statusText.setText("Message sent successfully");
     }
     
-    public static void messageSent(Boolean messageSent) {
+    /*public static void messageSent(Boolean messageSent) {
     	if (messageSent) {
     		statusText.setText("Message sent successfully");
     	}
     	else {
     		statusText.setText("Error sending mail");
     	}
-    }
+    }*/
 }

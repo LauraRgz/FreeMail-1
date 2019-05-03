@@ -225,7 +225,7 @@ public class Data {
 			
 			while((line = br.readLine()) != null) {
 				if(!line.trim().equals(password)) {
-					pw.print(password);
+					pw.println(line);
 					pw.flush();
 				}
 			}

@@ -9,12 +9,11 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class General extends Application {
-	static Stage menu;
+	
+	public static Stage menu;
 	static Stage sendMail;
 	static Stage addNewAccount;
-	static Stage messageContent;
-	static Stage messagesList;
-	static Stage receivedMessages;
+	public static Stage showMessage;
 	static Stage deleteAccount;
 	static Stage changeAccountInformation;
 
@@ -37,33 +36,19 @@ public class General extends Application {
 			sendMail.setTitle("FreeMail");
 			sendMail.setScene(secondScene);
 			
+			showMessage = new Stage();
+			URL messageFile = getClass().getClassLoader().getResource("MessageView.fxml");
+			Parent message = FXMLLoader.load(messageFile);
+			Scene messageView = new Scene(message);
+			showMessage.setTitle("FreeMail");
+			showMessage.setScene(messageView);
+			
 			addNewAccount = new Stage();
 			URL third = getClass().getClassLoader().getResource("AddNewAccount.fxml");
 			Parent rootThird = FXMLLoader.load(third);
 			Scene thirdScene = new Scene(rootThird);
 			addNewAccount.setTitle("FreeMail");
 			addNewAccount.setScene(thirdScene);
-			
-			messageContent = new Stage();
-			URL fourth = getClass().getClassLoader().getResource("MessageContent.fxml");
-			Parent rootFourth = FXMLLoader.load(fourth);
-			Scene fourthScene = new Scene(rootFourth);
-			messageContent.setTitle("FreeMail");
-			messageContent.setScene(fourthScene);
-			
-			messagesList = new Stage();
-			URL fifth = getClass().getClassLoader().getResource("MessagesList.fxml");
-			Parent rootFifth = FXMLLoader.load(fifth);
-			Scene fifthScene = new Scene(rootFifth);
-			messagesList.setTitle("FreeMail");
-			messagesList.setScene(fifthScene);
-			
-			receivedMessages = new Stage();
-			URL sixth = getClass().getClassLoader().getResource("ReceivedMessagesMail.fxml");
-			Parent rootSixth = FXMLLoader.load(sixth);
-			Scene sixthScene = new Scene(rootSixth);
-			receivedMessages.setTitle("FreeMail");
-			receivedMessages.setScene(sixthScene);
 			
 			deleteAccount = new Stage();
 			URL seventh = getClass().getClassLoader().getResource("DeleteAccount.fxml");
@@ -84,7 +69,7 @@ public class General extends Application {
 		}
 	}
 	
-	public static void Inicio() {
+	public static void start() {
 		launch(null);
 	}
 }

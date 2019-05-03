@@ -1,67 +1,50 @@
 package freemail.model;
 
-import java.io.IOException;
-
 import javax.mail.*;
 
 public class MessageContent {
 	
-	private Part content;
+	private Message content;
 	
 	public MessageContent(Message message) {
 		content = message;
 	}
 	
-	public Object getContent() {
-		return getMimeContent();
+	public String getSubject() throws MessagingException {
+		return content.getSubject();
 	}
 	
-	private Object getMimeContent() {
+	public String getFrom() throws MessagingException {
+		Address[] address = content.getFrom();
+		return address[0].toString();
+	}
+	
+	@Override
+	public String toString() {
 		try {
-			if(isTextPlain()) {
-				return getTextContent();
-			}else if(isHTML()) {
-				return getHTMLContent();
-			}else if(isInlineImage()) {
-				return "INLINE IMAGE";
-			}else if(isNestedContent()) {
-				return "NESTED CONTENT";
-			}else if(isMultipartContent()) {
-				return "Multipart content";
-			}
-		} catch (MessagingException | IOException e) {
-			System.out.println("Some crazy error!");
+			return getSubject() + " - " + getFrom();
+		} catch (MessagingException e) {
+			e.printStackTrace();
 		}
 		return null;
 	}
 	
-	private boolean isMultipartContent() throws MessagingException {
-		return content.isMimeType("multipart/*");
-	}
-
-	private boolean isHTML() throws MessagingException {
-		return content.isMimeType("text/html");
-	}
-
-	private String getHTMLContent() throws IOException, MessagingException {
-		return "HTML CONTENT";
-	}
-
-	private boolean isTextPlain() throws MessagingException {
-		return content.isMimeType("text/plain");
-	}
-
-	private String getTextContent() throws IOException, MessagingException{
-		return (String)content.getContent();
+	public String getContent() throws Exception {
+		return writePart(content);
 	}
 	
-	private boolean isNestedContent() throws MessagingException {
-		return content.isMimeType("message/rfc822");
+	private String writePart(Part p) throws Exception {
+		//check if the content is plain text
+		if (p.isMimeType("text/plain")) {
+		   return (String) p.getContent();
+		} 
+		//check if the content has attachment
+		else if (p.isMimeType("multipart/*")) {
+		   Multipart mp = (Multipart) p.getContent();
+		   int count = mp.getCount();
+		   for (int i = 0; i < count; i++)
+		      writePart(mp.getBodyPart(i));
+		}
+		return "Multimedia not available."; 
 	}
-	
-	private boolean isInlineImage() throws MessagingException {
-		return content.isMimeType("image/jpeg");
-	}
-	
-	
 }
