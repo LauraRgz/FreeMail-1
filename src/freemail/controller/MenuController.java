@@ -14,21 +14,13 @@ public class MenuController {
     private Button recievedMessages;
 
     @FXML
-    private MenuItem AddAccountButton;
-
-    @FXML
-    private MenuItem accountInformationButton;
+    private MenuItem addAccountButton;
 
     @FXML
     private MenuItem changeAccountInformationButton;
 
     @FXML
     private MenuItem deleteAccountButton;
-
-    @FXML
-    void pushAccountInformationButton(ActionEvent event) {
-
-    }
 
     @FXML
     void pushAddAccountButton(ActionEvent event) {
@@ -38,18 +30,20 @@ public class MenuController {
 
     @FXML
     void pushChangeAccountInformationButton(ActionEvent event) {
-
+    	General.menu.close();
+    	General.changeAccountInformation.show();
     }
 
     @FXML
     void pushDeleteAccountButton(ActionEvent event) {
-
+    	General.menu.close();
+    	General.deleteAccount.show();
     }
 
     @FXML
-    void pushRecievedMessages(ActionEvent event) {
+    void pressedRecievedMessages(ActionEvent event) {
     	General.menu.close();
-    	General.receivedMessages.show();
+    	General.showMessage.show();
     }
 
     @FXML

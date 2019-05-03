@@ -16,7 +16,7 @@ public class Account {
 		this.provider = provider;
 		if(credential.getMailAddress().contains("@gmail.com")) {
 			this.provider.setHost("imap.gmail.com");
-		}else if(credential.getMailAddress().contains("@outlook.com")) {
+		}else if(credential.getMailAddress().contains("@outlook")) {
 			this.provider.setHost("imap-mail.outlook.com");
 		}
 	}

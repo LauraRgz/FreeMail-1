@@ -9,13 +9,13 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class General extends Application {
-	static Stage menu;
+	
+	public static Stage menu;
 	static Stage sendMail;
 	static Stage addNewAccount;
-	static Stage messageContent;
-	static Stage messagesList;
-	static Stage receivedMessages;
-	
+	public static Stage showMessage;
+	static Stage deleteAccount;
+	static Stage changeAccountInformation;
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
@@ -36,6 +36,13 @@ public class General extends Application {
 			sendMail.setTitle("FreeMail");
 			sendMail.setScene(secondScene);
 			
+			showMessage = new Stage();
+			URL messageFile = getClass().getClassLoader().getResource("MessageView.fxml");
+			Parent message = FXMLLoader.load(messageFile);
+			Scene messageView = new Scene(message);
+			showMessage.setTitle("FreeMail");
+			showMessage.setScene(messageView);
+			
 			addNewAccount = new Stage();
 			URL third = getClass().getClassLoader().getResource("AddNewAccount.fxml");
 			Parent rootThird = FXMLLoader.load(third);
@@ -43,33 +50,26 @@ public class General extends Application {
 			addNewAccount.setTitle("FreeMail");
 			addNewAccount.setScene(thirdScene);
 			
-			messageContent = new Stage();
-			URL fourth = getClass().getClassLoader().getResource("MessageContent.fxml");
-			Parent rootFourth = FXMLLoader.load(fourth);
-			Scene fourthScene = new Scene(rootFourth);
-			messageContent.setTitle("FreeMail");
-			messageContent.setScene(fourthScene);
+			deleteAccount = new Stage();
+			URL seventh = getClass().getClassLoader().getResource("DeleteAccount.fxml");
+			Parent rootSeventh = FXMLLoader.load(seventh);
+			Scene seventhScene = new Scene(rootSeventh);
+			deleteAccount.setTitle("FreeMail");
+			deleteAccount.setScene(seventhScene);
 			
-			messagesList = new Stage();
-			URL fifth = getClass().getClassLoader().getResource("MessagesList.fxml");
-			Parent rootFifth = FXMLLoader.load(fifth);
-			Scene fifthScene = new Scene(rootFifth);
-			messagesList.setTitle("FreeMail");
-			messagesList.setScene(fifthScene);
-			
-			receivedMessages = new Stage();
-			URL sixth = getClass().getClassLoader().getResource("ReceivedMessagesMail.fxml");
-			Parent rootSixth = FXMLLoader.load(sixth);
-			Scene sixthScene = new Scene(rootSixth);
-			receivedMessages.setTitle("FreeMail");
-			receivedMessages.setScene(sixthScene);
+			changeAccountInformation = new Stage();
+			URL eigth = getClass().getClassLoader().getResource("ChangeAccountInformation.fxml");
+			Parent rootEigth = FXMLLoader.load(eigth);
+			Scene eigthScene = new Scene(rootEigth);
+			changeAccountInformation.setTitle("FreeMail");
+			changeAccountInformation.setScene(eigthScene);
 			
 		}catch(Exception e) {
 			e.printStackTrace();
 		}
 	}
 	
-	public static void Inicio() {
+	public static void main(String[] args) {
 		launch(null);
 	}
 }

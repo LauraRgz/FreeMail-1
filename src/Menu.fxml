@@ -14,7 +14,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="freemail.controller.MenuController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="freemail.controller.MenuController">
    <bottom>
       <GridPane BorderPane.alignment="CENTER">
         <columnConstraints>
@@ -69,7 +69,7 @@
                   <Insets left="50.0" />
                </GridPane.margin>
             </Button>
-            <Button fx:id="recievedMessages" mnemonicParsing="false" onAction="#pushRecievedMessages" text="Received Messages" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+            <Button fx:id="recievedMessages" mnemonicParsing="false" onAction="#pressedRecievedMessages" text="Received Messages" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                <font>
                   <Font size="18.0" />
                </font>
@@ -80,7 +80,6 @@
             <MenuButton mnemonicParsing="false" text="Account" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="TOP">
               <items>
                 <MenuItem fx:id="AddAccountButton" mnemonicParsing="false" onAction="#pushAddAccountButton" text="Add Account" />
-                <MenuItem fx:id="accountInformationButton" mnemonicParsing="false" onAction="#pushAccountInformationButton" text="Account Information" />
                   <MenuItem fx:id="changeAccountInformationButton" mnemonicParsing="false" onAction="#pushChangeAccountInformationButton" text="Chage Account Information" />
                   <MenuItem fx:id="deleteAccountButton" mnemonicParsing="false" onAction="#pushDeleteAccountButton" text="Delete Account" />
               </items>
