@@ -91,7 +91,7 @@ public class ChangeAccountInformationController {
     		if(account.isConnected() && newAccount.isConnected()) {
     			Data.editName(accountName, newAccountName);
     			Data.editMail(mail, newMail);
-    			Data.editPassword(repeatPassword, newRepeatPassword);
+    			Data.editPassword(password, newPassword);
         		
         		accountNameText.clear();
             	mailText.clear();
