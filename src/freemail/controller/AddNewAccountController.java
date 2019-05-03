@@ -76,8 +76,8 @@ public class AddNewAccountController {
 
     @FXML
     void pushBackButton(ActionEvent event) {
-    	Main.addNewAccount.close();
-    	Main.menu.show();
+    	General.addNewAccount.close();
+    	General.menu.show();
     	accountNameText.clear();
     	mailText.clear();
     	passwordText.clear();

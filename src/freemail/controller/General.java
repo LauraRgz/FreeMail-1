@@ -8,7 +8,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-public class Main extends Application {
+public class General extends Application {
 	
 	public static Stage menu;
 	static Stage sendMail;

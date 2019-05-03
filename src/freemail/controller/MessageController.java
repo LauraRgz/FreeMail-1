@@ -1,13 +1,12 @@
-
-import java.net.URL;
-import java.util.ResourceBundle;
+package freemail.controller;
 
 import javax.mail.Message;
 import javax.mail.MessagingException;
 
-import freemail.controller.Main;
+import freemail.controller.General;
 import freemail.model.Account;
 import freemail.model.Credential;
+import freemail.model.Data;
 import freemail.model.MailProvider;
 import freemail.model.MailProvider.Protocol;
 import freemail.model.MessageContent;
@@ -17,22 +16,22 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
+import javafx.scene.control.TextField;
 
 
-public class MessageController implements Initializable{
+public class MessageController{
 		
 	private ObservableList<MessageContent> messageObservableList;
+	
+	private Account account;
 
     @FXML
     private ListView<MessageContent> messageList;
     
-    //TODO: To check this interface you have to put a real mail.
-    private Credential credential = new Credential("example@mail.com", "example", "example");
-    private MailProvider provider = new MailProvider(null, Protocol.IMAP);
-    private Account account = new Account(credential, provider);
+    @FXML
+    private TextField emailTextField;
 
     @FXML
     private Label fromLabel;
@@ -46,7 +45,17 @@ public class MessageController implements Initializable{
     @FXML
     void checkMessages(ActionEvent event) {
 		try {
-			setNewMessages();
+			Data data = new Data();
+			String mail = emailTextField.getText();
+			String password = data.returnPassword(mail);
+			account = new Account(new Credential(mail, password, "fetch"), new MailProvider(null, Protocol.IMAP));
+			account.connect();
+			if(account.isConnected()) {
+				setNewMessages();
+			}else {
+				emailTextField.clear();
+				emailTextField.setText("Set a correct mail please");
+			}
 		} catch (MessagingException e) {
 			e.printStackTrace();
 		}
@@ -54,14 +63,9 @@ public class MessageController implements Initializable{
     
     @FXML
     void goBack(ActionEvent event) {
-    	Main.showMessage.close();
-    	Main.menu.show();
+    	General.showMessage.close();
+    	General.menu.show();
     }
-	
-	@Override
-	public void initialize(URL location, ResourceBundle resources) {
-		setMessages();
-	}
 
 	private void setNewMessages() throws MessagingException {
 		messageList.setItems(null);
