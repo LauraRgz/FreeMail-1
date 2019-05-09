@@ -1,4 +1,4 @@
-<img src="https://github.com/joseluis-dev/FreeMail/blob/master/src/FreeMailLogo.png" width="60">
+<img src="https://github.com/joseluis-dev/FreeMail/blob/master/src/FreeMailLogo.png" width="100">
 
 # FreeMail
 
@@ -54,9 +54,9 @@ FreeMail is free and open source software, it is made available to you under the
 If you want to see more details see the [License](./LICENSE) file.
 
 ## Collaborators
-* **Andrés Bravo:** [andresbravom](https://github.com/andresbravom)
-* **José Luis de la Hoz:** [joseluis-dev](https://github.com/joseluis-dev)
-* **Alonso Martín-Toledano:** [AlonsoMartinToledano](https://github.com/AlonsoMartinToledano)
-* **Laura Rodríguez:** [LauraRgz](https://github.com/LauraRgz)
+* **AndrÃ©s Bravo:** [andresbravom](https://github.com/andresbravom)
+* **JosÃ© Luis de la Hoz:** [joseluis-dev](https://github.com/joseluis-dev)
+* **Alonso MartÃ­n-Toledano:** [AlonsoMartinToledano](https://github.com/AlonsoMartinToledano)
+* **Laura RodrÃ­guez:** [LauraRgz](https://github.com/LauraRgz)
 
 
