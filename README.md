@@ -51,5 +51,10 @@ FreeMail is free and open source software, it is made available to you under the
 
 If you want to see more details see the [License](License) file.
 
+##Collaborators
+* **Andrés Bravo:** [andresbravom](https://github.com/andresbravom)
+* **José Luis de la Hoz:** [joseluis-dev](https://github.com/joseluis-dev)
+* **Alonso Martín-Toledano:** [AlonsoMartinToledano](https://github.com/AlonsoMartinToledano)
+* **Laura Rodríguez:** [LauraRgz](https://github.com/LauraRgz)
 
 
