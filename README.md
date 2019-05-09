@@ -46,12 +46,12 @@ Once you have installed FreeMail, open the application by clicking on the icon. 
 3. Press the "Check" button
 4. To see the content of a mail, press the mail in the list.
 
-##License
+## License
 FreeMail is free and open source software, it is made available to you under the terms of the GNU General Public License (GPLv3). 
 
 If you want to see more details see the [License](License) file.
 
-##Collaborators
+## Collaborators
 * **Andrés Bravo:** [andresbravom](https://github.com/andresbravom)
 * **José Luis de la Hoz:** [joseluis-dev](https://github.com/joseluis-dev)
 * **Alonso Martín-Toledano:** [AlonsoMartinToledano](https://github.com/AlonsoMartinToledano)
