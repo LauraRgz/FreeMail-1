@@ -1,3 +1,5 @@
+![FreeMail logo](https://github.com/joseluis-dev/FreeMail/blob/master/src/FreeMailLogo.png)
+
 # FreeMail
 
 FreeMail is a desktop client mail developed to have all your mails in one application. Despite being a prototype, it has enough functionality to provide basic actions in different email accounts.
