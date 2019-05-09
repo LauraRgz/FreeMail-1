@@ -49,7 +49,7 @@ Once you have installed FreeMail, open the application by clicking on the icon. 
 ## License
 FreeMail is free and open source software, it is made available to you under the terms of the GNU General Public License (GPLv3). 
 
-If you want to see more details see the [License](./License) file.
+If you want to see more details see the [License](./LICENSE) file.
 
 ## Collaborators
 * **Andrés Bravo:** [andresbravom](https://github.com/andresbravom)
