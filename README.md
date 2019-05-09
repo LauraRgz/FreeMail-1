@@ -1,4 +1,4 @@
-![FreeMail logo](https://github.com/joseluis-dev/FreeMail/blob/master/src/FreeMailLogo.png)
+<img src="https://github.com/joseluis-dev/FreeMail/blob/master/src/FreeMailLogo.png" width="48">
 
 # FreeMail
 
