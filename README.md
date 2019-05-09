@@ -30,3 +30,11 @@ Once you have installed FreeMail, open the application by clicking on the icon. 
 2. Click the "Delete Account" button
 3. Type your account information
 4. Press the "Delete" button
+
+### Send mail
+1. Press the "Send Mail" button
+2. In the "From" field type the mail you want to use to send the message.
+3. In the "To" field type the mail you want to send the message to.
+4. In the "Subject" field type subject of the mail.
+5. Write the message in the blank field.
+6. Press the "Send" button.
