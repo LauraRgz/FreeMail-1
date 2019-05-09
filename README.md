@@ -5,6 +5,7 @@ FreeMail is a desktop client mail developed to have all your mails in one applic
 With FreeMail we want to make a difference. We have developed the application under GPLv3 license. This enables other users to change everything and customise the product, creating a collaborative environment.
 
 ## Installation
+
 ## Usage
 Once you have installed FreeMail, open the application by clicking on the icon. You will see he main menu where you can add, delete and an account by clicking "Account". You can also send a message and see your inbox.
 
