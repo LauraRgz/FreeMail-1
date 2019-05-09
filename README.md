@@ -39,3 +39,10 @@ Once you have installed FreeMail, open the application by clicking on the icon. 
 4. In the "Subject" field type subject of the mail.
 5. Write the message in the blank field.
 6. Press the "Send" button.
+
+### Received Messages
+1. Press the "Received Messages" button.
+2. Write the mail address you want to check messages from.
+3. Press the "Check" button
+4. To see the content of a mail, press the mail in the list.
+
