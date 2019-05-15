@@ -8,6 +8,10 @@ With FreeMail we want to make a difference. We have developed the application un
 
 ## Installation
 
+Windows 10: [Download](https://github.com/AlonsoMartinToledano/FreeMail/blob/master/Installation/FreeMail.exe?raw=true)
+
+macOS Mojave: [Download](https://github.com/AlonsoMartinToledano/FreeMail/blob/master/Installation/FreeMail.jar?raw=true)
+
 ## Usage
 Once you have installed FreeMail, open the application by clicking on the icon. You will see he main menu where you can add, delete and an account by clicking "Account". You can also send a message and see your inbox.
 
