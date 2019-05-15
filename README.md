@@ -9,6 +9,7 @@ With FreeMail we want to make a difference. We have developed the application un
 ## Installation
 
 Windows 10: [Download](https://github.com/AlonsoMartinToledano/FreeMail/blob/master/Installation/FreeMail.exe?raw=true)
+
 macOS Mojave: [Download](https://github.com/AlonsoMartinToledano/FreeMail/blob/master/Installation/FreeMail.jar?raw=true)
 
 ## Usage
