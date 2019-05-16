@@ -6,11 +6,19 @@ FreeMail is a desktop client mail developed to have all your mails in one applic
 
 With FreeMail we want to make a difference. We have developed the application under GPLv3 license. This enables other users to change everything and customise the product, creating a collaborative environment.
 
+## Requirements
+* Windows 10 or macOS Mojave
+* Java 8
+* Internet connection
+
 ## Installation
+FreeMail does not require an installation. You can download the executable file here:
 
 Windows 10: [Download](https://github.com/AlonsoMartinToledano/FreeMail/blob/master/Installation/FreeMail.exe?raw=true)
 
 macOS Mojave: [Download](https://github.com/AlonsoMartinToledano/FreeMail/blob/master/Installation/FreeMail.jar?raw=true)
+
+Once you have the file in your computer, click on it to start using FreeMail.
 
 ## Usage
 Once you have installed FreeMail, open the application by clicking on the icon. You will see he main menu where you can add, delete and an account by clicking "Account". You can also send a message and see your inbox.
